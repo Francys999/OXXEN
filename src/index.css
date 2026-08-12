@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #232a37 #11161f;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: #0a0e14;
+  color: #e6ebf2;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #11161f;
+}
+::-webkit-scrollbar-thumb {
+  background: #232a37;
+  border-radius: 8px;
+}
+
+@layer components {
+  .container-oxxen {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-oxxen-accent px-5 py-2.5 text-sm font-semibold text-oxxen-bg transition-all duration-200 hover:brightness-110 hover:shadow-glow active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-oxxen-border bg-oxxen-surface2 px-5 py-2.5 text-sm font-semibold text-oxxen-text transition-all duration-200 hover:border-oxxen-accent/50 hover:text-oxxen-accent active:scale-95;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-[#06210f] transition-all duration-200 hover:brightness-110 active:scale-95;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-oxxen-border bg-oxxen-surface shadow-card;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-oxxen-text sm:text-3xl;
+  }
+
+  .section-subtitle {
+    @apply mt-2 text-sm text-oxxen-muted sm:text-base;
+  }
+
+  .input-oxxen {
+    @apply w-full rounded-xl border border-oxxen-border bg-oxxen-surface2 px-4 py-2.5 text-sm text-oxxen-text placeholder:text-oxxen-muted focus:border-oxxen-accent/60 focus:outline-none focus:ring-2 focus:ring-oxxen-accent/20;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+}
